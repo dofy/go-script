@@ -3,24 +3,44 @@
     <title>Go Script</title>
     <script charset="utf-8" src="jquery-2.1.1.min.js"> </script>
     <script charset="utf-8" src="go.js"> </script>
-    <script charset="utf-8">
-    $.go({
-        "?": function () {
-            console.log('????');
-            $('#debug').html('????');
-        },
-        "gh": function () {
-            console.log('Go Home.');
-            $('#debug').html('Go Home.');
-        }
-    });
-    </script>
-    </head>
-    <body>
-        <h2>Hello Go Script.</h2>
-        <p>
-            You can try <code>?</code> or <code>gh</code>
-        </p>
+    <style media="screen">
+    body {
+        background-color: #000;
+    }
+    h2{
+        color: #ccc;
+    }
+    p {
+        color: gray;
+    }
+    code {
+        color: green;
+    }
+    #debug {
+        color: lightblue;
+    }
+    </style>
+</head>
+<body>
+    <h2>Hello Go Script.</h2>
+    <p>
+        You can try <code>?</code>, <code>gh</code> OR <code>gd</code> :D
+    </p>
         <div id="debug"></div>
     </body>
 </html>
+<script charset="utf-8">
+$.go({
+    "?": function () {
+        console.log('????');
+        $('#debug').html('????');
+    },
+    "gh": function () {
+        console.log('Go Home.');
+        $('#debug').html('Go Home.');
+    },
+    "gd": function() {
+        location.href = 'https://qdan.me/';
+    }
+});
+</script>
