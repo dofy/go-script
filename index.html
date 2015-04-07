@@ -1,0 +1,26 @@
+<html>
+<head>
+    <title>Go Script</title>
+    <script charset="utf-8" src="jquery-2.1.1.min.js"> </script>
+    <script charset="utf-8" src="go.js"> </script>
+    <script charset="utf-8">
+    $.go({
+        "?": function () {
+            console.log('????');
+            $('#debug').html('????');
+        },
+        "gh": function () {
+            console.log('Go Home.');
+            $('#debug').html('Go Home.');
+        }
+    });
+    </script>
+    </head>
+    <body>
+        <h2>Hello Go Script.</h2>
+        <p>
+            You can try <code>?</code> or <code>gh</code>
+        </p>
+        <div id="debug"></div>
+    </body>
+</html>
